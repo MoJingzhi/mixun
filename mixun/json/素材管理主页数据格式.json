@@ -1,0 +1,42 @@
+{
+	"info_len":"2",//所有图文消息的长度
+	//content数组用的每一个元素就是要显示的一个图文消息
+	"info_content":[
+	{
+		"publish_time":{
+			"year":2014,
+			"month":12,
+			"day":8,
+			"hour":11,
+			"minute":10,
+		},
+		"one_or_more" : "one",//是单图文还是多图文
+		"summary":"这是摘要",//单图文才显示摘要，多图文不显示，因此不用数组存储
+		"info":{
+			"info_title":["标题1"],//第一个是主标题，剩下的都是副标题,这里是单图文，所以只有一个标题
+			"info_title_url":["url_1"],//标题的url，第一个是主标题的url，剩下的副标题按顺序
+			"info_img_url":["../img/lamborghini.jpg"],//第一个是主要内容的图片，剩下的是副内容的图片
+			"show":[true,true,true]//设置图片是否显示在正文当中，一般情况下，都是显示的
+		},
+
+	},
+	{
+		"publish_time":{
+			"year":2014,
+			"month":12,
+			"day":8,
+			"hour":11,
+			"minute":10,
+		},
+		"one_or_more" :"more",//是单图文还是多图文
+		"summary":"这是摘要",//单图文才显示摘要，多图文不用显示，因此不用数组存储
+		"info":{
+			"info_title":["主标题","副标题1","副标题2"],//第一个是主标题，剩下的都是副标题
+			"info_title_url":["url_1","url_2","url_3"],//标题的url，第一个是主标题的url，剩下的副标题按顺序
+			"info_img_url":["../img/more.png","../img/small-lam.jpg","../img/small-lam.jpg"],//第一个是主要内容的图片，剩下的是副内容的图片
+			"img_show":[true,true,true]//设置图片是否显示在正文当中，一般情况下，都是显示的
+		},
+
+	}
+	]
+};

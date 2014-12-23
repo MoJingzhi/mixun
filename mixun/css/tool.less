@@ -1,0 +1,93 @@
+//三角形
+.theTriangle(top,@w:5px,@c:blue){
+	position: absolute;
+    border-color:transparent transparent @c transparent;
+    border-style:dashed dashed solid dashed;
+    border-width:@w;
+}
+.theTriangle(bottom,@w:5px,@c:blue){
+	position: absolute;
+    border-color:@c transparent transparent transparent;
+    border-style: solid dashed dashed dashed;
+    border-width:@w;
+}
+
+.theTriangle(left,@w:5px,@c:blue){
+	position: absolute;
+    border-color:transparent @c transparent transparent;
+    border-style:dashed  solid dashed dashed;
+    border-width:@w;
+}
+
+.theTriangle(right,@w:5px,@c:blue){
+	position: absolute;
+    border-color:transparent transparent transparent @c;
+    border-style:dashed dashed dashed solid;
+    border-width:@w;
+}
+//这是编辑区那块的三角形-----strat
+.triangle{
+    .theTriangle(left,12px,rgb(244,245,249));
+     //border-right-color: rgb(231,231,235);
+    top: 40px;
+    left: -24px;
+}
+.out-triangle{
+    .theTriangle(left,12px,rgb(231,231,235));
+    top:40px;
+    left:-25px;
+}
+//这是编辑区那块的三角形-----end
+
+//这是弹出层图片库那块的三角形-----start----注意是弹出层的图片库
+.img-tip{
+    .in{
+        .theTriangle(right,6px,#fff);
+        top:10px;
+        right:-11px;
+    }
+    .out{
+        .theTriangle(right,6px,#e7e7eb);
+        top:10px;
+        right:-12px;
+    }
+}
+//这是弹出层图片库那块的三角形-----end----注意是弹出层的图片库
+
+//这是弹出层，选择下一页的按钮的三角形-----start
+#img-reposity{
+    .page-nav{
+        .next-tri{
+            .theTriangle(right,7px,rgb(145,145,145));
+            top:10px;
+            left:91px;
+        }
+    }
+}
+//这是弹出层，选择下一页的按钮的三角形-----start
+
+//这是图片库的三角形-----start----这不是弹出层的，是整个页面都是图片库
+.upload-tip{
+    .out-tri{
+        .theTriangle(right,6px,#e7e7eb);
+        top:9px;
+        right:-13px;
+    }
+    .in-tri{
+        .theTriangle(right,6px,#fff);
+        top:9px;
+        right:-12px;
+    }   
+}
+//这是图片库的三角形-----end----这不是弹出层的，是整个页面都是图片库
+
+//图片库（不是弹出层）分页导航的三角形
+#main-bd{
+    .page-nav{
+        .next-tri{
+            .theTriangle(right,7px,rgb(145,145,145));
+            top:10px;
+            left:112px;
+        }
+    }
+}
